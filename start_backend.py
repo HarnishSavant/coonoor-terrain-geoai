@@ -26,8 +26,8 @@ if not chosen_python:
     chosen_python = Path(sys.executable)
 
 print(f"Launching Coonoor GeoAI Server using: {chosen_python}")
-print("Access WebGIS Application at: http://localhost:8080")
-print("Access OpenAPI Documentation at: http://localhost:8080/docs")
+print("Access WebGIS Application at: http://localhost:8000")
+print("Access OpenAPI Documentation at: http://localhost:8000/docs")
 
 try:
     subprocess.run([str(chosen_python), str(SCRIPT_PATH)], check=True)

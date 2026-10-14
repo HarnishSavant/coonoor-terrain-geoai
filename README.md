@@ -52,7 +52,7 @@ The project features a full-featured, dark-mode WebGIS interface accessible thro
 - **Vector Overlays**: Toggleable WGS84 GeoJSON vector boundaries for Coonoor Taluk AOI, 993-segment OSM road network, and observer vantage points with 5 km radius circles.
 - **Interactive Statistical Charts**: Responsive horizontal bar charts displaying land cover, trafficability distribution, and road classification.
 - **Dynamic Legends**: Context-sensitive legends with smooth continuous color ramps (Elevation, Slope) and discrete categorical palettes.
-- **RESTful API Backend**: FastAPI server with automated Swagger/OpenAPI documentation at `http://localhost:8080/docs`.
+- **RESTful API Backend**: FastAPI server with automated Swagger/OpenAPI documentation at `http://localhost:8000/docs`.
 
 ### Launching the WebGIS Application
 Double-click `start_app.bat` or run:
@@ -60,8 +60,8 @@ Double-click `start_app.bat` or run:
 python D:\Defence\MyProject1\start_backend.py
 ```
 Then navigate to:
-- **WebGIS Interface**: [http://localhost:8080](http://localhost:8080)
-- **API Documentation**: [http://localhost:8080/docs](http://localhost:8080/docs)
+- **WebGIS Interface**: [http://localhost:8000](http://localhost:8000)
+- **API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 Alternatively, open `D:\Defence\MyProject1\06_Outputs\Web_App\index.html` directly in any web browser.
 

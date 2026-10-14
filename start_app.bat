@@ -9,11 +9,11 @@ echo.
 cd /d "D:\Defence\MyProject1"
 
 echo Starting FastAPI Backend and WebGIS Server...
-echo Serving at: http://localhost:8080
-echo OpenAPI Docs: http://localhost:8080/docs
+echo Serving at: http://localhost:8000
+echo OpenAPI Docs: http://localhost:8000/docs
 echo.
 
-start "" "http://localhost:8080"
+start "" "http://localhost:8000"
 
 if exist "C:\Program Files\Python311\python.exe" (
     "C:\Program Files\Python311\python.exe" "D:\Defence\MyProject1\05_Scripts\backend_api.py"
