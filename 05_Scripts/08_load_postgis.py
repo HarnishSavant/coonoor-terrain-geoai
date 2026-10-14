@@ -31,9 +31,12 @@ if ENV_PATH.exists():
 host = os.environ.get("PGHOST", env_vars.get("PGHOST", "localhost"))
 port = int(os.environ.get("PGPORT", env_vars.get("PGPORT", "5432")))
 database = os.environ.get("PGDATABASE", env_vars.get("PGDATABASE", "postgres"))
-user = os.environ.get("PGUSER", env_vars.get("PGUSER", "postgres"))
-password = os.environ.get("PGPASSWORD", env_vars.get("PGPASSWORD", "root"))
+password = os.environ.get("PGPASSWORD", env_vars.get("PGPASSWORD", ""))
 schema_name = os.environ.get("PGSCHEMA", env_vars.get("PGSCHEMA", "coonoor_geoai"))
+
+if not password:
+    log("ERROR: PostgreSQL password not specified. Set PGPASSWORD environment variable or in 09_Config/.env.")
+    sys.exit(1)
 
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)

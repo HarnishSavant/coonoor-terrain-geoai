@@ -97,13 +97,30 @@ Continuous index values in Coonoor range from **0.00 to 99.50 (Mean: 60.01, StdD
 ## 6. Topographic Viewshed & Line-of-Sight Visibility
 - **Observer Location:** Highest commanding ridge summit in Coonoor Taluk:
   - UTM: 685,544.00 m E, 1,257,114.32 m N
-  - Geographic: 76.7001° E, 11.3664° N
+  - Geographic: 76.700346° E, 11.367111° N
   - Surface Elevation: **2,388.21 m MSL**
 - **Observer Parameters:** Eye-level offset = 2.0 m; target height = 0.0 m; maximum analysis radius = 5.0 km (5,000 m).
-- **Visibility Results:**
-  - Direct Line-of-Sight Visible Area: **8.81 km² (3.96% of study area)**
-  - Topographically Obscured / Dead Ground: **213.63 km² (96.04% of study area)**
-  - Analysis: Due to the extreme dissected relief of the Nilgiris escarpment, high-altitude vantage points suffer from severe dead-ground shadowing in adjacent deep gorges, demonstrating why multi-sensor or airborne reconnaissance is required in montane terrain.
+- **Visibility Results (Rigorous Localized Buffer Denominator):**
+  - **Analysis Buffer Zone Area (5 km radius in AOI):** **40.00 km²**
+  - **Direct Line-of-Sight Visible Area:** **8.81 km²** (**22.04% of the 5 km analysis zone**)
+  - **Topographically Shadowed / Dead Ground in Zone:** **31.18 km²** (**77.96% of the 5 km analysis zone**)
+  - *Taluk-Wide Diluted Ratio:* 8.81 km² / 222.44 km² = 3.96% (Note: comparing a 5km radius to the full taluk distorts local visibility; the 40.00 km² zone is the mathematically correct denominator).
+- **Analysis:** Due to the dissected relief of the Nilgiris escarpment, high-altitude vantage points suffer from severe dead-ground shadowing in adjacent deep gorges, demonstrating why multi-sensor or airborne reconnaissance is required in montane terrain.
+
+---
+
+## 6b. Categorical Land Cover (ESA WorldCover 2021)
+Using ESA WorldCover 2021 v200 (10m), reprojected with Nearest Neighbor interpolation to 30m UTM Zone 43N, surface cover across Coonoor Taluk was classified into 6 verified domains:
+
+| Class Value | Class Name | Area (km²) | Area (ha) | Percentage | Hex Color |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **10** | **Tree cover** (Montane Shola & Moist Deciduous) | **149.72** | 14,971.95 | **67.31%** | `#006400` |
+| **30** | **Grassland** (Plateau Shola Grasslands) | **58.87** | 5,887.26 | **26.47%** | `#ffff4c` |
+| **50** | **Built-up** (Settlements & Cantonment) | **7.95** | 794.70 | **3.57%** | `#fa0000` |
+| **40** | **Cropland** (Commercial Tea & Coffee Estates) | **5.77** | 577.08 | **2.59%** | `#f096ff` |
+| **60** | **Bare / Sparse vegetation** | **0.07** | 6.84 | **0.03%** | `#b4b4b4` |
+| **80** | **Permanent water bodies** | **0.06** | 5.58 | **0.03%** | `#0064c8` |
+| **Total** | **Valid Classified Land Cover** | **222.44** | 22,244.04 | **100.00%** | — |
 
 ---
 
@@ -112,7 +129,9 @@ The project successfully established an automated PostGIS integration in Postgre
 - `aoi_boundary`: MultiPolygon boundary, EPSG:32643, GiST spatial index.
 - `roads_network`: 993 MultiLineString features with road classification attributes, EPSG:32643, GiST spatial index.
 - `observer_points`: Point vantage locations, EPSG:32643, GiST spatial index.
-- `trafficability_classes`: Tabular summary with exact pixel counts and square kilometer metrics.
+- `viewshed_zones`: 5 km analysis zone polygon, EPSG:32643, GiST spatial index.
+- `trafficability_classes`: 4-class movement zones with exact pixel counts and square kilometer metrics.
+- `landcover_classes`: 6 ESA WorldCover classes with area statistics and color mappings.
 - `terrain_statistics`: Tabular geomorphometric parameters across all 7 raster metrics.
 
 ---
@@ -134,10 +153,14 @@ The project successfully established an automated PostGIS integration in Postgre
 ---
 
 ## 9. Deliverables & Quality Audit
-A comprehensive audit executed via `05_Scripts/07_validate_outputs.py` verified **31 out of 31 deliverables (100.0% compliance score)**:
+A comprehensive audit executed via `05_Scripts/07_validate_outputs.py` verified **50 out of 50 deliverables (100.0% compliance score)**:
 - 4 High-Resolution Cartographic Maps (PNG + Vector PDF) in `06_Outputs/Maps/`
 - 4 Analytical Research Figures in `06_Outputs/Figures/`
-- 5 Structured CSV Summary Tables in `06_Outputs/Tables/`
+- 6 Structured CSV Summary Tables in `06_Outputs/Tables/`
+- 6 Georeferenced Transparent PNG Overlays & Metadata JSON in `06_Outputs/Web_Overlays/`
+- 1 Standalone Interactive WebGIS Application & Leaflet Engine in `06_Outputs/Web_App/`
+- 1 Rule-Based GeoAI Assistant Chatbot with Live Map Layer Hooks
+- 1 FastAPI RESTful Backend Server in `05_Scripts/backend_api.py`
 - 1 Packaged ArcGIS Pro Project in `04_ArcGIS/Coonoor_Analysis.aprx`
 - Complete Data Manifest in `07_Metadata/data_manifest.csv`
 - Full System & Pipeline Execution Logs in `08_Logs/`

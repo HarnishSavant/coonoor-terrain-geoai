@@ -211,8 +211,45 @@
         </div>
     </div>
 
+    <!-- ═══════════════ GEOAI ASSISTANT CHAT PANEL ═══════════════ -->
+    <div id="chat-panel" class="hidden">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h3>GeoAI Terrain Assistant</h3>
+                    <span class="chat-sub">Deterministic Spatial Intelligence</span>
+                </div>
+            </div>
+            <button class="chat-close" id="chat-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="chat-msg bot">
+                <div class="msg-bubble">
+                    <p>Welcome! I am your <strong>Coonoor GeoAI Assistant</strong>. I query our verified spatial database and raster analysis pipeline to answer terrain, trafficability, and visibility questions.</p>
+                    <div class="chat-chips">
+                        <button class="chip" data-q="What is the elevation range?">Elevation Range</button>
+                        <button class="chip" data-q="What is the trafficability breakdown?">Trafficability</button>
+                        <button class="chip" data-q="What is the viewshed visibility?">Viewshed</button>
+                        <button class="chip" data-q="What are the land cover classes?">Land Cover</button>
+                        <button class="chip" data-q="Tell me about the road network">Road Network</button>
+                        <button class="chip" data-q="What is the ML feature importance?">ML Surrogate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="chat-form" class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Ask about slope, elevation, trafficability..." autocomplete="off" />
+            <button type="submit" id="chat-send-btn" class="icon-btn" title="Send Query"><i class="fas fa-paper-plane"></i></button>
+        </form>
+        <div class="chat-footer-badge">
+            <small><i class="fas fa-database"></i> Rule-based / PostGIS verified (Non-LLM deterministic)</small>
+        </div>
+    </div>
+
     <!-- ═══════════════ FLOATING ACTION BUTTONS ═══════════════ -->
     <div id="fab-group">
+        <button class="fab" id="fab-chat" title="GeoAI Assistant"><i class="fas fa-robot"></i></button>
         <button class="fab" id="fab-legend" title="Toggle Legend"><i class="fas fa-palette"></i></button>
         <button class="fab" id="fab-charts" title="View Charts"><i class="fas fa-chart-pie"></i></button>
         <button class="fab" id="fab-center" title="Reset View"><i class="fas fa-compress-arrows-alt"></i></button>

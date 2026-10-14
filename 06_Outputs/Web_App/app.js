@@ -514,6 +514,41 @@
         });
 
         // FAB buttons
+        const chatFab = document.getElementById('fab-chat');
+        const chatPanel = document.getElementById('chat-panel');
+        if (chatFab && chatPanel) {
+            chatFab.addEventListener('click', function () {
+                chatPanel.classList.toggle('hidden');
+                chatFab.classList.toggle('active');
+                if (!chatPanel.classList.contains('hidden')) {
+                    document.getElementById('chat-input')?.focus();
+                }
+            });
+
+            document.getElementById('chat-close')?.addEventListener('click', function () {
+                chatPanel.classList.add('hidden');
+                chatFab.classList.remove('active');
+            });
+
+            // Chat form submit
+            document.getElementById('chat-form')?.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const input = document.getElementById('chat-input');
+                const q = input.value.trim();
+                if (!q) return;
+                input.value = '';
+                await handleChatQuery(q);
+            });
+
+            // Chips
+            document.querySelectorAll('.chat-chips .chip').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const q = this.dataset.q;
+                    if (q) handleChatQuery(q);
+                });
+            });
+        }
+
         document.getElementById('fab-legend').addEventListener('click', function () {
             const panel = document.getElementById('legend-panel');
             panel.classList.toggle('hidden');
@@ -558,6 +593,104 @@
         document.querySelector('.modal-backdrop')?.addEventListener('click', () => {
             document.getElementById('info-modal').classList.add('hidden');
         });
+    }
+
+    // ─── Chatbot Query Handler ──────────────────────────────
+    async function handleChatQuery(text) {
+        const container = document.getElementById('chat-messages');
+        if (!container) return;
+
+        // Append user bubble
+        const uMsg = document.createElement('div');
+        uMsg.className = 'chat-msg user';
+        uMsg.innerHTML = `<div class="msg-bubble">${escapeHtml(text)}</div>`;
+        container.appendChild(uMsg);
+        container.scrollTop = container.scrollHeight;
+
+        let responseData = null;
+        try {
+            const res = await fetch('/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: text })
+            });
+            if (res.ok) {
+                responseData = await res.json();
+            }
+        } catch (err) {
+            // Static file fallback when running without backend API
+            responseData = getStaticFallbackAnswer(text);
+        }
+
+        if (!responseData) {
+            responseData = getStaticFallbackAnswer(text);
+        }
+
+        // Append bot bubble
+        const bMsg = document.createElement('div');
+        bMsg.className = 'chat-msg bot';
+        let actionBtnHtml = '';
+        if (responseData.source_layer && overlayLayers[responseData.source_layer]) {
+            actionBtnHtml = `<br><button class="layer-btn" onclick="window._geoaiSelectLayer('${responseData.source_layer}')"><i class="fas fa-layer-group"></i> Activate ${responseData.source_layer} on map</button>`;
+        }
+
+        bMsg.innerHTML = `
+            <div class="msg-bubble">
+                <p>${responseData.answer}</p>
+                ${actionBtnHtml}
+            </div>
+        `;
+        container.appendChild(bMsg);
+        container.scrollTop = container.scrollHeight;
+    }
+
+    // Global hook for chat layer button
+    window._geoaiSelectLayer = function(layerId) {
+        selectLayer(layerId);
+    };
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+    }
+
+    function getStaticFallbackAnswer(q) {
+        const query = q.toLowerCase();
+        if (query.includes('elevation') || query.includes('dem') || query.includes('height')) {
+            return {
+                answer: 'Copernicus GLO-30 DEM analysis reveals an elevation range of 413.07 m to 2,388.21 m MSL across Coonoor Taluk (Mean: 1,635.93 m). The terrain drops sharply into the Kallar gorge.',
+                source_layer: 'elevation'
+            };
+        } else if (query.includes('traffic') || query.includes('barrier') || query.includes('impassable')) {
+            return {
+                answer: 'Multi-Criteria Evaluation classifies Coonoor into 4 movement zones: High (14.06%), Moderate (38.94%), Restricted (29.26%), and Impassable/Cliffs (17.74% / 39.06 km²).',
+                source_layer: 'trafficability'
+            };
+        } else if (query.includes('viewshed') || query.includes('visibility') || query.includes('vantage')) {
+            return {
+                answer: 'Line-of-sight analysis from the 2,388.21 m ridge vantage covers 8.81 km² (22.04% of the 5km analysis zone; 3.96% of the full taluk). 77.96% of the zone is topographically obscured.',
+                source_layer: 'viewshed'
+            };
+        } else if (query.includes('slope') || query.includes('steep') || query.includes('gradient')) {
+            return {
+                answer: 'Topographic slope averages 20.58° (Max: 75.78°). 39.06 km² (17.74%) exceeds the critical 30° vehicle movement threshold.',
+                source_layer: 'slope'
+            };
+        } else if (query.includes('landcover') || query.includes('forest') || query.includes('tree') || query.includes('tea')) {
+            return {
+                answer: 'ESA WorldCover 2021 identifies: Tree Cover (67.31%), Grassland (26.47%), Built-up settlements (3.57%), and Commercial Cropland/Tea estates (2.59%).',
+                source_layer: 'landcover'
+            };
+        } else if (query.includes('road') || query.includes('highway') || query.includes('transport')) {
+            return {
+                answer: 'The OSM road network contains 993 segments spanning 598.34 km with an overall density of 2.69 km/km².',
+                source_layer: null
+            };
+        } else {
+            return {
+                answer: 'I can answer questions on elevation range, trafficability classification, viewshed visibility, slope steepness, ESA land cover, and road density for Coonoor Taluk.',
+                source_layer: null
+            };
+        }
     }
 
     // ─── Initialize ─────────────────────────────────────────

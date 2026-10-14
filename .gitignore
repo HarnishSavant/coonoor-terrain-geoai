@@ -1,4 +1,4 @@
-# Python
+# Python environment and bytecode
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,12 +6,29 @@ __pycache__/
 .pytest_cache/
 .pyHistory
 
-# Environments
+# Environments and Secrets
+.env
+.env.*
+*.env
+!.env.example
 venv/
 env/
-.env.local
+.venv/
 
-# ArcGIS Pro lock files & cache
+# Scratch & Raw Geodatabases
+MyProject1.gdb/
+MyProject1.atbx
+New Notebook*.ipynb
+
+# ArcGIS Pro project binary (not useful on GitHub)
+04_ArcGIS/*.aprx
+
+# Temp shapefile indexes generated during export
+**/temp_*.sbn
+**/temp_*.sbx
+**/temp_*.shp.xml
+
+# ArcGIS Pro lock files & background caches
 *.lock
 *.sr.lock
 *.aprx.lock
@@ -21,11 +38,11 @@ Index/
 .backups/
 RasterFunctionTemplates/
 
-# Large Raw Cache (keep processed GeoTIFFs, outputs and shapefiles)
-02_Raw_Data/DEM/*.tif
-02_Raw_Data/LandCover/*.tif
+# Large Raw External Datasets (reproducible via 05_Scripts/02_acquire_dem.py & 03b_process_worldcover.py)
+02_Raw_Data/**/*.tif
+02_Raw_Data/**/*.tiff
 
-# OS generated
+# OS and system caches
 Thumbs.db
 ehthumbs.db
 Desktop.ini
