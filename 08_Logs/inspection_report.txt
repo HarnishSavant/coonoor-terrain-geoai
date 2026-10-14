@@ -1,0 +1,56 @@
+============================================================
+COONOOR GEOAI PROJECT - ENVIRONMENT INSPECTION REPORT
+============================================================
+Python Executable: D:\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe
+Python Version: 3.11.11 (main, Mar  3 2025, 15:29:37) [MSC v.1938 64 bit (AMD64)]
+Platform: win32
+D: Drive Total: 119.33 GB | Free: 60.82 GB
+C: Drive Total: 118.53 GB | Free: 4.57 GB
+ArcPy: SUCCESSFULLY IMPORTED
+ArcGIS Pro Version: 3.5
+ArcGIS Pro Install Path: d:\arcgis\pro\
+License Level: ArcInfo
+Spatial Analyst Extension: Available
+3D Analyst Extension: Available
+
+Checking Python Dependencies:
+  - numpy: 1.26.0
+  - scipy: 1.15.3
+  - pandas: 2.1.0
+  - requests: 2.34.2
+  - matplotlib: 3.9.2
+  - sklearn: 1.6.1
+  - psycopg2: 2.9.9 (dt dec pq3 ext lo64)
+  - shapely: 2.0.6
+
+Checking Geodatabase: D:\Defence\MyProject1\MyProject1.gdb
+  Feature Classes (4): ['coonoor_taluk', 'coonoor_taluk_Project', 'coonoor_osm_roads_temp', 'coonoor_osm_roads_utm_all']
+  Rasters (0): []
+  Tables (0): []
+    * Layer: coonoor_taluk
+      Count: 1 features
+      CRS: GCS_WGS_1984 (EPSG:4326)
+      Type: Polygon
+      Extent: Xmin=76.6675, Ymin=11.2368, Xmax=76.8575, Ymax=11.3846
+    * Layer: coonoor_taluk_Project
+      Count: 1 features
+      CRS: WGS_1984_UTM_Zone_43N (EPSG:32643)
+      Type: Polygon
+      Extent: Xmin=681966.5113, Ymin=1242711.1394, Xmax=702712.2221, Ymax=1259057.3587
+    * Layer: coonoor_osm_roads_temp
+      Count: 0 features
+      CRS: GCS_WGS_1984 (EPSG:4326)
+      Type: Polygon
+      Extent: Xmin=nan, Ymin=nan, Xmax=nan, Ymax=nan
+    * Layer: coonoor_osm_roads_utm_all
+      Count: 0 features
+      CRS: WGS_1984_UTM_Zone_43N (EPSG:32643)
+      Type: Polygon
+      Extent: Xmin=nan, Ymin=nan, Xmax=nan, Ymax=nan
+
+Checking PostgreSQL / PostGIS:
+  psycopg2 is available in Python.
+  PostgreSQL service 'postgresql-x64-18' verified running via Windows Service Manager.
+============================================================
+INSPECTION COMPLETE
+============================================================

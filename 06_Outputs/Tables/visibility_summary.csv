@@ -1,0 +1,16 @@
+Parameter,Value,Unit,Description
+Observer Name,Coonoor Topographic Ridge Vantage Point,Label,Hypothetical demonstration vantage point
+Observer Longitude,76.700346,Degrees E,WGS84 geographic longitude
+Observer Latitude,11.367111,Degrees N,WGS84 geographic latitude
+Observer UTM Easting,685544.00,Meters,WGS84 UTM Zone 43N Easting
+Observer UTM Northing,1257114.32,Meters,WGS84 UTM Zone 43N Northing
+Terrain Elevation,2388.21,Meters MSL,Copernicus GLO-30 surface elevation
+Observer Eye Height,2.0,Meters,Above-ground standing observer height
+Target Height,0.0,Meters,Ground-level target height
+Max Visibility Distance,5000.0,Meters,5.0 km analysis radius
+Analysis Zone Area in AOI,40.00,km²,5 km circular buffer clipped to Coonoor AOI
+Visible Area,8.81,km²,Direct line-of-sight visible cells
+Obscured Area in Zone,31.18,km²,Topographically shadowed cells within 5 km zone
+Zone Visibility Percentage,22.04,%,Visible area relative to 5km analysis zone
+Taluk Visibility Percentage,3.96,%,Visible area relative to full 222.44 km² taluk
+Status,VERIFIED,Status,Corrected denominator applied

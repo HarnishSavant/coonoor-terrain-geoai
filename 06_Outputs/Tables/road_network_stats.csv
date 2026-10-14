@@ -1,0 +1,13 @@
+Highway_Class,Length_km,Percentage,Density_km_per_sqkm
+unclassified,253.34,42.34,1.1389
+residential,134.88,22.54,0.6064
+tertiary,101.07,16.89,0.4544
+secondary,57.47,9.60,0.2583
+trunk,25.53,4.27,0.1148
+service,11.03,1.84,0.0496
+track,7.84,1.31,0.0353
+path,4.00,0.67,0.0180
+living_street,1.53,0.26,0.0069
+steps,1.08,0.18,0.0049
+footway,0.36,0.06,0.0016
+pedestrian,0.21,0.04,0.0010

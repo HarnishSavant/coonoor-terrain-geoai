@@ -1,0 +1,54 @@
+{
+  "crs": "EPSG:32643",
+  "wgs84_bounds": [
+    [
+      11.236987641980235,
+      76.66674948408516
+    ],
+    [
+      11.383922321412767,
+      76.85779977157138
+    ]
+  ],
+  "center": [
+    11.310454981696502,
+    76.76227462782828
+  ],
+  "width_cols": 692,
+  "height_rows": 546,
+  "overlays": {
+    "elevation": {
+      "name": "Digital Elevation Model",
+      "file": "elevation_overlay.png",
+      "unit": "Meters MSL",
+      "min": 413.0695495605469,
+      "max": 2388.21044921875
+    },
+    "hillshade": {
+      "name": "Analytical Hillshade (315\u00b0/45\u00b0)",
+      "file": "hillshade_overlay.png",
+      "unit": "Illumination Index (0-255)"
+    },
+    "slope": {
+      "name": "Topographic Slope Steepness",
+      "file": "slope_overlay.png",
+      "unit": "Degrees",
+      "max": 75.78
+    },
+    "trafficability": {
+      "name": "Terrain Trafficability Classification",
+      "file": "trafficability_overlay.png",
+      "unit": "4-Class Movement Zones"
+    },
+    "viewshed": {
+      "name": "Topographic Viewshed (5km Radius)",
+      "file": "viewshed_overlay.png",
+      "unit": "Line-of-Sight Visibility"
+    },
+    "landcover": {
+      "name": "ESA WorldCover 2021 Land Cover",
+      "file": "landcover_overlay.png",
+      "unit": "Categorical Land Cover Classes"
+    }
+  }
+}

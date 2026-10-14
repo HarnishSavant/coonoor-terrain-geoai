@@ -1,0 +1,45 @@
+============================================================
+POSTGIS DATABASE LOADER - COONOOR TALUK
+============================================================
+Successfully connected to PostgreSQL at localhost:5432/postgres (user: postgres)
+
+Applying Schema DDL from: D:\Defence\MyProject1\10_PostGIS\schema.sql
+Schema and tables successfully created/verified.
+
+Loading AOI boundary from: D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.shp
+AOI boundary loaded successfully.
+
+Loading road network from: D:/Defence/MyProject1/03_Processed_Data/OSM/coonoor_roads_utm.shp
+Loaded 993 road network segments.
+
+Loading observer points from: D:/Defence/MyProject1/03_Processed_Data/Visibility/observer_points.shp
+Loaded 1 observer points.
+
+Loading viewshed 5km analysis zone from: D:\Defence\MyProject1\03_Processed_Data\Visibility\viewshed_analysis_zone.shp
+Loaded viewshed analysis zone.
+
+Loading trafficability classes from: D:\Defence\MyProject1\06_Outputs\Tables\trafficability_class_summary.csv
+Loaded trafficability class summary.
+
+Loading ESA WorldCover classes from: D:\Defence\MyProject1\06_Outputs\Tables\landcover_stats.csv
+Loaded land cover class summary.
+
+Loading terrain statistics from: D:\Defence\MyProject1\06_Outputs\Tables\terrain_stats.csv
+Loaded terrain surface metrics.
+
+============================================================
+POSTGIS VERIFICATION RESULTS
+============================================================
+  AOI Boundary      : [(1, 32643, 'ST_MultiPolygon')]
+  Roads Network     : [(993, 32643, 'ST_MultiLineString')]
+  Observer Points   : [(1, 32643, 'ST_Point')]
+  Viewshed Zones    : [(1, 32643, 'ST_MultiPolygon')]
+  Traffic Classes   : [(4,)]
+  Landcover Classes : [(6,)]
+  Terrain Stats     : [(7,)]
+
+Spatial Indexes Verified in Database:
+  - Table aoi_boundary: idx_aoi_geom (GiST spatial index active)
+  - Table roads_network: idx_roads_geom (GiST spatial index active)
+  - Table observer_points: idx_observer_geom (GiST spatial index active)
+  - Table viewshed_zones: idx_viewshed_zone_geom (GiST spatial index active)

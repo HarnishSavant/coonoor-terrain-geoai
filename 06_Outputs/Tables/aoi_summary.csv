@@ -1,0 +1,19 @@
+Parameter,Value,Unit
+Study Area,Coonoor Taluk,Administrative
+CRS Projected,WGS 1984 UTM Zone 43N,EPSG:32643
+CRS Geographic,WGS 1984,EPSG:4326
+Area SqKm,222.4404,km²
+Area Hectares,22244.04,ha
+Area SqMeters,222440388.45,m²
+Perimeter,81.03,km
+Vertex Count,101,count
+Parts,1,count
+West Bounding Lon,76.667503,degrees
+South Bounding Lat,11.236771,degrees
+East Bounding Lon,76.857483,degrees
+North Bounding Lat,11.384551,degrees
+UTM XMin,681966.51,meters
+UTM YMin,1242711.14,meters
+UTM XMax,702712.22,meters
+UTM YMax,1259057.36,meters
+Validation Status,VERIFIED,Status

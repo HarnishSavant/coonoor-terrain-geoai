@@ -1,0 +1,58 @@
+============================================================
+COONOOR GEOAI PROJECT - DATA QUALITY & MANIFEST AUDIT
+============================================================
+Deliverable Item                     | Type         | Size       | Status     | Details
+-------------------------------------------------------------------------------------
+AOI Reference Polygon                | Vector       | 1.7 KB     | VERIFIED   | Features=1, Geom=Polygon, CRS=WGS_1984_UTM_Zone_43N
+Raw DEM Tile                         | Raster       | 42.13 MB   | VERIFIED   | Cols=3600, Rows=3600, Cell=0.0m, CRS=GCS_WGS_1984
+Raw OSM Road GeoJSON                 | Vector/GeoJSON | 3.20 MB    | VERIFIED   | Present and valid
+Processed Elevation DEM              | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Slope Degrees                        | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Slope Percent                        | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Aspect Compass                       | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Analytical Hillshade                 | Raster       | 282.8 KB   | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Surface Curvature                    | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Ruggedness TRI                       | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Continuous Trafficability Index      | Raster       | 3.75 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Classified Trafficability Raster     | Raster       | 47.0 KB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Road Proximity Raster                | Raster       | 1.88 MB    | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Clipped OSM Roads UTM                | Vector       | 449.8 KB   | VERIFIED   | Features=993, Geom=Polyline, CRS=WGS_1984_UTM_Zone_43N
+Observer Vantage Points              | Vector       | 0.1 KB     | VERIFIED   | Features=1, Geom=Point, CRS=WGS_1984_UTM_Zone_43N
+Viewshed Visibility Raster           | Raster       | 9.8 KB     | VERIFIED   | Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Packaged ArcGIS Pro Project          | Project      | 46.2 KB    | VERIFIED   | Present and valid
+PostGIS DDL Schema                   | SQL          | 3.1 KB     | VERIFIED   | Present and valid
+Map 01 Elevation PNG                 | Cartography  | 880.6 KB   | VERIFIED   | Present and valid
+Map 01 Elevation PDF                 | Cartography  | 640.3 KB   | VERIFIED   | Present and valid
+Map 02 Slope PNG                     | Cartography  | 1021.5 KB  | VERIFIED   | Present and valid
+Map 03 Trafficability PNG            | Cartography  | 901.7 KB   | VERIFIED   | Present and valid
+Map 04 Viewshed PNG                  | Cartography  | 765.8 KB   | VERIFIED   | Present and valid
+Figure 01 Dem/Slope Distributions    | Figure       | 268.6 KB   | VERIFIED   | Present and valid
+Figure 02 Trafficability Classes     | Figure       | 253.4 KB   | VERIFIED   | Present and valid
+Figure 03 Road Network Stats         | Figure       | 224.4 KB   | VERIFIED   | Present and valid
+Figure 04 Feature Importance ML      | Figure       | 150.6 KB   | VERIFIED   | Present and valid
+ESA WorldCover 2021 Raster           | Raster       | 45.3 KB    | VERIFIED   | Cols=693, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N
+Viewshed 5km Analysis Zone           | Vector       | 2.7 KB     | VERIFIED   | Features=1, Geom=Polygon, CRS=WGS_1984_UTM_Zone_43N
+AOI Summary Table                    | Table        | 0.6 KB     | VERIFIED   | Present and valid
+Terrain Stats Table                  | Table        | 0.6 KB     | VERIFIED   | Present and valid
+Road Stats Table                     | Table        | 0.4 KB     | VERIFIED   | Present and valid
+Trafficability Summary Table         | Table        | 0.5 KB     | VERIFIED   | Present and valid
+Visibility Summary Table             | Table        | 1.1 KB     | VERIFIED   | Present and valid
+Landcover Stats Table                | Table        | 0.4 KB     | VERIFIED   | Present and valid
+Web Overlays Metadata JSON           | JSON         | 1.3 KB     | VERIFIED   | Present and valid
+Elevation Web Overlay                | WebOverlay   | 180.8 KB   | VERIFIED   | Present and valid
+Hillshade Web Overlay                | WebOverlay   | 275.9 KB   | VERIFIED   | Present and valid
+Slope Web Overlay                    | WebOverlay   | 505.1 KB   | VERIFIED   | Present and valid
+Trafficability Web Overlay           | WebOverlay   | 73.9 KB    | VERIFIED   | Present and valid
+Viewshed Web Overlay                 | WebOverlay   | 6.4 KB     | VERIFIED   | Present and valid
+Landcover Web Overlay                | WebOverlay   | 57.5 KB    | VERIFIED   | Present and valid
+AOI Web GeoJSON                      | Vector/GeoJSON | 4.4 KB     | VERIFIED   | Present and valid
+Roads Web GeoJSON                    | Vector/GeoJSON | 1.15 MB    | VERIFIED   | Present and valid
+Observer Web GeoJSON                 | Vector/GeoJSON | 0.3 KB     | VERIFIED   | Present and valid
+WebGIS App HTML                      | Frontend     | 11.1 KB    | VERIFIED   | Present and valid
+WebGIS App CSS                       | Frontend     | 21.4 KB    | VERIFIED   | Present and valid
+WebGIS App JS                        | Frontend     | 24.0 KB    | VERIFIED   | Present and valid
+FastAPI Backend Server               | Backend      | 7.1 KB     | VERIFIED   | Present and valid
+Application Launcher Batch           | Script       | 0.9 KB     | VERIFIED   | Present and valid
+-------------------------------------------------------------------------------------
+AUDIT SUMMARY: 50 VERIFIED, 0 FAILED/MISSING (Total: 50)
+Deliverable Compliance Score: 100.0%

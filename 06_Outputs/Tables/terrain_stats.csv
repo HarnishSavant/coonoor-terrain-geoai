@@ -1,0 +1,8 @@
+Metric,Path,Units,Min,Max,Mean,StdDev,CellSize_m,CRS
+Elevation,elevation.tif,Meters,413.07,2388.21,1635.93,368.70,30.0,EPSG:32643
+Slope_Degrees,slope_deg.tif,Degrees,0.03,75.78,20.58,10.28,30.0,EPSG:32643
+Slope_Percent,slope_pct.tif,Percent,0.05,394.58,39.38,23.59,30.0,EPSG:32643
+Aspect,aspect.tif,Compass Degrees,0.00,360.00,168.08,89.77,30.0,EPSG:32643
+Hillshade,hillshade.tif,Illumination (0-255),0.00,254.00,149.84,50.12,30.0,EPSG:32643
+Curvature,curvature.tif,1/100 z-units,-10.27,12.40,0.00,0.81,30.0,EPSG:32643
+Ruggedness_TRI,tri_ruggedness.tif,Elevation Range (m),0.24,303.73,30.48,17.48,30.0,EPSG:32643

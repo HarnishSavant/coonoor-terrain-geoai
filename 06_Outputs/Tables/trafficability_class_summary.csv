@@ -1,0 +1,5 @@
+Class_ID,Class_Name,Pixel_Count,Area_sqm,Area_ha,Area_sqkm,Percentage
+1,"Class 1: High Trafficability (Gentle Slopes <= 10 deg, Low Ruggedness)",34402,30961800.0,3096.18,30.9618,14.06
+2,"Class 2: Moderate Trafficability (Rolling Slopes 10-20 deg, Moderate Ruggedness)",95295,85765500.0,8576.55,85.7655,38.94
+3,"Class 3: Restricted Trafficability (Steep Slopes 20-30 deg, High Ruggedness)",71603,64442700.0,6444.27,64.4427,29.26
+4,"Class 4: Impassable / Severe Barrier (Very Steep Slopes > 30 deg, Cliffs/Escarpments)",43405,39064500.0,3906.45,39.0645,17.74

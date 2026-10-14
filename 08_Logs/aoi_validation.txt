@@ -1,0 +1,40 @@
+============================================================
+AOI VALIDATION REPORT - COONOOR TALUK
+============================================================
+Input Layer: D:/Defence/MyProject1/MyProject1.gdb\coonoor_taluk_Project
+Feature Count: 1
+Geometry Type: Polygon
+Spatial Reference: WGS_1984_UTM_Zone_43N
+EPSG Code: 32643
+Linear Unit: Meter
+Projected Extent (UTM Zone 43N):
+  XMin: 681966.51 m
+  YMin: 1242711.14 m
+  XMax: 702712.22 m
+  YMax: 1259057.36 m
+  Bounding Box Dimensions: 20.75 km (W) x 16.35 km (H)
+
+Geometry Measurements:
+  Total Area: 222,440,388.45 m²
+  Total Area: 222.4404 km² (Expected ~222.44 km²)
+  Total Area: 22,244.04 hectares
+  Perimeter: 81.03 km
+  Geometry Parts: 1
+  Vertex Count: 101
+
+Geographic Extent (WGS84 EPSG:4326):
+  West (Min Lon): 76.667503°
+  South (Min Lat): 11.236771°
+  East (Max Lon): 76.857483°
+  North (Max Lat): 11.384551°
+
+Target shapefile D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.shp already exists, overwriting safely...
+
+Exporting validated AOI to: D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.shp
+Export successful.
+
+Area Discrepancy from target (222.44 km²): 0.0004 km² (0.00%)
+STATUS: AOI area matches expected domain within <5% tolerance (PASS).
+============================================================
+VALIDATION FINISHED SUCCESSFULLY
+============================================================

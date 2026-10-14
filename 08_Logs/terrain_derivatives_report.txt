@@ -1,0 +1,33 @@
+============================================================
+TERRAIN DERIVATIVES PROCESSING - COONOOR TALUK
+============================================================
+Base Elevation Raster: D:/Defence/MyProject1/03_Processed_Data/DEM/elevation_32643.tif
+
+Computing Slope (Degrees)...
+  Saved slope_deg.tif in 1.9s
+
+Computing Slope (Percent Rise)...
+  Saved slope_pct.tif in 0.9s
+
+Computing Aspect...
+  Saved aspect.tif in 1.1s
+
+Computing Analytical Hillshade (Azimuth=315, Altitude=45)...
+  Saved hillshade.tif in 2.1s
+
+Computing Topographic Curvature...
+  Saved curvature.tif in 0.7s
+
+Computing Terrain Ruggedness Index (3x3 focal elevation range)...
+  Saved tri_ruggedness.tif in 0.8s
+
+============================================================
+TERRAIN METRICS SUMMARY
+============================================================
+Elevation       : Min=  413.07 | Max= 2388.21 | Mean= 1635.93 | Std=  368.70 Meters
+Slope_Degrees   : Min=    0.03 | Max=   75.78 | Mean=   20.58 | Std=   10.28 Degrees
+Slope_Percent   : Min=    0.05 | Max=  394.58 | Mean=   39.38 | Std=   23.59 Percent
+Aspect          : Min=    0.00 | Max=  360.00 | Mean=  168.08 | Std=   89.77 Compass Degrees
+Hillshade       : Min=    0.00 | Max=  254.00 | Mean=  149.84 | Std=   50.12 Illumination (0-255)
+Curvature       : Min=  -10.27 | Max=   12.40 | Mean=    0.00 | Std=    0.81 1/100 z-units
+Ruggedness_TRI  : Min=    0.24 | Max=  303.73 | Mean=   30.48 | Std=   17.48 Elevation Range (m)

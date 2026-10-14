@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints
+.pytest_cache/
+.pyHistory
+
+# Environments
+venv/
+env/
+.env.local
+
+# ArcGIS Pro lock files & cache
+*.lock
+*.sr.lock
+*.aprx.lock
+ImportLog/
+GpMessages/
+Index/
+.backups/
+RasterFunctionTemplates/
+
+# Large Raw Cache (keep processed GeoTIFFs, outputs and shapefiles)
+02_Raw_Data/DEM/*.tif
+02_Raw_Data/LandCover/*.tif
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

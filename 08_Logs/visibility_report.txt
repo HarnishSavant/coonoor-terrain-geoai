@@ -1,0 +1,25 @@
+============================================================
+TOPOGRAPHIC VIEWSHED & VISIBILITY ASSESSMENT (CORRECTED)
+============================================================
+Selected Peak Vantage Point inside AOI:
+  UTM Coordinates (EPSG:32643): X = 685544.00 m, Y = 1257114.32 m
+  Terrain Surface Elevation: 2388.21 m above MSL
+Created observer feature class at: D:\Defence\MyProject1\03_Processed_Data\Visibility\observer_points.shp
+  Observer Offset (Eye Height): 2.0 m
+  Target Offset (Ground Level): 0.0 m
+  Maximum Analysis Radius: 5.0 km
+
+Generating 5.0 km Analysis Buffer Zone...
+  5 km Analysis Zone within Coonoor Taluk: 40.00 km² (3999.8 ha)
+
+Executing ArcPy Viewshed Tool...
+Masked Viewshed completed in 1.4 seconds. Saved to: D:\Defence\MyProject1\03_Processed_Data\Visibility\viewshed_demonstration.tif
+
+============================================================
+CORRECTED VISIBILITY ANALYSIS RESULTS
+============================================================
+5 km Analysis Zone within AOI: 40.00 km² (44,444 cells)
+Visible Area: 8.81 km² (9,794 cells)
+Obscured / Shadowed Area: 31.18 km² (34,650 cells)
+Visibility Percentage (Within 5 km Analysis Zone): 22.04%
+Visibility Percentage (Of Total 222.44 km² Taluk): 3.96%

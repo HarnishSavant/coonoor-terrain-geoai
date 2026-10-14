@@ -1,0 +1,7 @@
+Class_Value,Class_Name,Hex_Color,Pixel_Count,Area_sqkm,Area_ha,Percentage
+10,"Tree cover",#006400,166355,149.7195,14971.95,67.31
+30,"Grassland",#ffff4c,65414,58.8726,5887.26,26.47
+40,"Cropland (Tea/Coffee Estates)",#f096ff,6412,5.7708,577.08,2.59
+50,"Built-up (Settlements/Urban)",#fa0000,8830,7.9470,794.70,3.57
+60,"Bare / sparse vegetation",#b4b4b4,76,0.0684,6.84,0.03
+80,"Permanent water bodies",#0064c8,62,0.0558,5.58,0.03

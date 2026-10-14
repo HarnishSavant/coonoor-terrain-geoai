@@ -1,0 +1,34 @@
+============================================================
+TERRAIN TRAFFICABILITY & ACCESSIBILITY INDEX GENERATION
+============================================================
+Inputs Verified:
+  Slope Raster: D:/Defence/MyProject1/03_Processed_Data/Terrain/slope_deg.tif
+  Ruggedness (TRI) Raster: D:/Defence/MyProject1/03_Processed_Data/Terrain/tri_ruggedness.tif
+  Road Proximity Raster: D:/Defence/MyProject1/03_Processed_Data/Features/road_proximity.tif
+
+Normalizing Criteria into Standardized 0-100 Scales...
+Applying Expert-Defined Multi-Criteria Weights:
+  - Slope Factor: 55%
+  - Ruggedness (TRI) Factor: 30%
+  - Road Proximity Factor: 15%
+Saved Continuous Trafficability Index to: D:\Defence\MyProject1\03_Processed_Data\Terrain\trafficability_index.tif
+
+Computing Discrete 4-Class Trafficability Model...
+Saved Classified Trafficability Raster to: D:\Defence\MyProject1\03_Processed_Data\Terrain\trafficability_classes.tif
+
+============================================================
+TRAFFICABILITY CLASSIFICATION RESULTS
+============================================================
+Total Valid Raster Pixels: 244,705
+Total Classified Area: 220.23 km² (Reference AOI = 222.44 km²)
+  Class 1: High Trafficability (Gentle Slopes <= 10 deg, Low Ruggedness):
+    Area:  30.96 km² (  3096.2 ha) | 14.06% of study area | 34,402 cells
+  Class 2: Moderate Trafficability (Rolling Slopes 10-20 deg, Moderate Ruggedness):
+    Area:  85.77 km² (  8576.5 ha) | 38.94% of study area | 95,295 cells
+  Class 3: Restricted Trafficability (Steep Slopes 20-30 deg, High Ruggedness):
+    Area:  64.44 km² (  6444.3 ha) | 29.26% of study area | 71,603 cells
+  Class 4: Impassable / Severe Barrier (Very Steep Slopes > 30 deg, Cliffs/Escarpments):
+    Area:  39.06 km² (  3906.4 ha) | 17.74% of study area | 43,405 cells
+
+Continuous Trafficability Index (0-100 Score):
+  Min: 0.00 | Max: 99.50 | Mean: 60.01 | StdDev: 20.51

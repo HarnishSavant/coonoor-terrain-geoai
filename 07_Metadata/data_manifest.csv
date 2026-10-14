@@ -1,0 +1,51 @@
+Deliverable,Relative_Path,Type,Expected_CRS,File_Size,Status,Technical_Details
+AOI Reference Polygon,01_AOI\coonoor_aoi_utm.shp,Vector,EPSG:32643,1.7 KB,VERIFIED,"Features=1, Geom=Polygon, CRS=WGS_1984_UTM_Zone_43N"
+Raw DEM Tile,02_Raw_Data\DEM\Copernicus_DSM_COG_10_N11_00_E076_00_DEM.tif,Raster,EPSG:4326,42.13 MB,VERIFIED,"Cols=3600, Rows=3600, Cell=0.0m, CRS=GCS_WGS_1984"
+Raw OSM Road GeoJSON,02_Raw_Data\OSM\coonoor_highways_raw.geojson,Vector/GeoJSON,EPSG:4326,3.20 MB,VERIFIED,Present and valid
+Processed Elevation DEM,03_Processed_Data\DEM\elevation_32643.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Slope Degrees,03_Processed_Data\Terrain\slope_deg.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Slope Percent,03_Processed_Data\Terrain\slope_pct.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Aspect Compass,03_Processed_Data\Terrain\aspect.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Analytical Hillshade,03_Processed_Data\Terrain\hillshade.tif,Raster,EPSG:32643,282.8 KB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Surface Curvature,03_Processed_Data\Terrain\curvature.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Ruggedness TRI,03_Processed_Data\Terrain\tri_ruggedness.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Continuous Trafficability Index,03_Processed_Data\Terrain\trafficability_index.tif,Raster,EPSG:32643,3.75 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Classified Trafficability Raster,03_Processed_Data\Terrain\trafficability_classes.tif,Raster,EPSG:32643,47.0 KB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Road Proximity Raster,03_Processed_Data\Features\road_proximity.tif,Raster,EPSG:32643,1.88 MB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Clipped OSM Roads UTM,03_Processed_Data\OSM\coonoor_roads_utm.shp,Vector,EPSG:32643,449.8 KB,VERIFIED,"Features=993, Geom=Polyline, CRS=WGS_1984_UTM_Zone_43N"
+Observer Vantage Points,03_Processed_Data\Visibility\observer_points.shp,Vector,EPSG:32643,0.1 KB,VERIFIED,"Features=1, Geom=Point, CRS=WGS_1984_UTM_Zone_43N"
+Viewshed Visibility Raster,03_Processed_Data\Visibility\viewshed_demonstration.tif,Raster,EPSG:32643,9.8 KB,VERIFIED,"Cols=692, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Packaged ArcGIS Pro Project,04_ArcGIS\Coonoor_Analysis.aprx,Project,N/A,46.2 KB,VERIFIED,Present and valid
+PostGIS DDL Schema,10_PostGIS\schema.sql,SQL,EPSG:32643,3.1 KB,VERIFIED,Present and valid
+Map 01 Elevation PNG,06_Outputs\Maps\Map_01_Elevation_Hillshade.png,Cartography,EPSG:32643,880.6 KB,VERIFIED,Present and valid
+Map 01 Elevation PDF,06_Outputs\Maps\Map_01_Elevation_Hillshade.pdf,Cartography,EPSG:32643,640.3 KB,VERIFIED,Present and valid
+Map 02 Slope PNG,06_Outputs\Maps\Map_02_Slope_Steepness.png,Cartography,EPSG:32643,1021.5 KB,VERIFIED,Present and valid
+Map 03 Trafficability PNG,06_Outputs\Maps\Map_03_Terrain_Trafficability_Index.png,Cartography,EPSG:32643,901.7 KB,VERIFIED,Present and valid
+Map 04 Viewshed PNG,06_Outputs\Maps\Map_04_Visibility_Viewshed_Demonstration.png,Cartography,EPSG:32643,765.8 KB,VERIFIED,Present and valid
+Figure 01 Dem/Slope Distributions,06_Outputs\Figures\Figure_01_Elevation_and_Slope_Distributions.png,Figure,N/A,268.6 KB,VERIFIED,Present and valid
+Figure 02 Trafficability Classes,06_Outputs\Figures\Figure_02_Trafficability_Class_Distribution.png,Figure,N/A,253.4 KB,VERIFIED,Present and valid
+Figure 03 Road Network Stats,06_Outputs\Figures\Figure_03_Road_Network_Classification.png,Figure,N/A,224.4 KB,VERIFIED,Present and valid
+Figure 04 Feature Importance ML,06_Outputs\Figures\Figure_04_Feature_Importance.png,Figure,N/A,150.6 KB,VERIFIED,Present and valid
+ESA WorldCover 2021 Raster,03_Processed_Data\LandCover\worldcover_coonoor_32643.tif,Raster,EPSG:32643,45.3 KB,VERIFIED,"Cols=693, Rows=546, Cell=30.0m, CRS=WGS_1984_UTM_Zone_43N"
+Viewshed 5km Analysis Zone,03_Processed_Data\Visibility\viewshed_analysis_zone.shp,Vector,EPSG:32643,2.7 KB,VERIFIED,"Features=1, Geom=Polygon, CRS=WGS_1984_UTM_Zone_43N"
+AOI Summary Table,06_Outputs\Tables\aoi_summary.csv,Table,N/A,0.6 KB,VERIFIED,Present and valid
+Terrain Stats Table,06_Outputs\Tables\terrain_stats.csv,Table,N/A,0.6 KB,VERIFIED,Present and valid
+Road Stats Table,06_Outputs\Tables\road_network_stats.csv,Table,N/A,0.4 KB,VERIFIED,Present and valid
+Trafficability Summary Table,06_Outputs\Tables\trafficability_class_summary.csv,Table,N/A,0.5 KB,VERIFIED,Present and valid
+Visibility Summary Table,06_Outputs\Tables\visibility_summary.csv,Table,N/A,1.1 KB,VERIFIED,Present and valid
+Landcover Stats Table,06_Outputs\Tables\landcover_stats.csv,Table,N/A,0.4 KB,VERIFIED,Present and valid
+Web Overlays Metadata JSON,06_Outputs\Web_Overlays\web_overlays_metadata.json,JSON,N/A,1.3 KB,VERIFIED,Present and valid
+Elevation Web Overlay,06_Outputs\Web_Overlays\elevation_overlay.png,WebOverlay,N/A,180.8 KB,VERIFIED,Present and valid
+Hillshade Web Overlay,06_Outputs\Web_Overlays\hillshade_overlay.png,WebOverlay,N/A,275.9 KB,VERIFIED,Present and valid
+Slope Web Overlay,06_Outputs\Web_Overlays\slope_overlay.png,WebOverlay,N/A,505.1 KB,VERIFIED,Present and valid
+Trafficability Web Overlay,06_Outputs\Web_Overlays\trafficability_overlay.png,WebOverlay,N/A,73.9 KB,VERIFIED,Present and valid
+Viewshed Web Overlay,06_Outputs\Web_Overlays\viewshed_overlay.png,WebOverlay,N/A,6.4 KB,VERIFIED,Present and valid
+Landcover Web Overlay,06_Outputs\Web_Overlays\landcover_overlay.png,WebOverlay,N/A,57.5 KB,VERIFIED,Present and valid
+AOI Web GeoJSON,06_Outputs\Web_App\data\coonoor_aoi.geojson,Vector/GeoJSON,EPSG:4326,4.4 KB,VERIFIED,Present and valid
+Roads Web GeoJSON,06_Outputs\Web_App\data\coonoor_roads.geojson,Vector/GeoJSON,EPSG:4326,1.15 MB,VERIFIED,Present and valid
+Observer Web GeoJSON,06_Outputs\Web_App\data\observer_point.geojson,Vector/GeoJSON,EPSG:4326,0.3 KB,VERIFIED,Present and valid
+WebGIS App HTML,06_Outputs\Web_App\index.html,Frontend,N/A,11.1 KB,VERIFIED,Present and valid
+WebGIS App CSS,06_Outputs\Web_App\style.css,Frontend,N/A,21.4 KB,VERIFIED,Present and valid
+WebGIS App JS,06_Outputs\Web_App\app.js,Frontend,N/A,24.0 KB,VERIFIED,Present and valid
+FastAPI Backend Server,05_Scripts\backend_api.py,Backend,N/A,7.1 KB,VERIFIED,Present and valid
+Application Launcher Batch,start_app.bat,Script,N/A,0.9 KB,VERIFIED,Present and valid

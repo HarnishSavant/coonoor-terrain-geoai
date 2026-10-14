@@ -1,0 +1,65 @@
+{
+  "project_name": "Coonoor GeoAI Terrain Trafficability & Visibility Assessment",
+  "project_root": "D:/Defence/MyProject1",
+  "crs_utm": "EPSG:32643",
+  "crs_geographic": "EPSG:4326",
+  "study_area": {
+    "name": "Coonoor Taluk",
+    "district": "The Nilgiris",
+    "state": "Tamil Nadu",
+    "country": "India"
+  },
+  "aoi": {
+    "gdb_path": "D:/Defence/MyProject1/MyProject1.gdb",
+    "raw_layer": "coonoor_taluk",
+    "projected_layer": "coonoor_taluk_Project",
+    "output_shp": "D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.shp",
+    "output_geojson": "D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.geojson"
+  },
+  "dem": {
+    "target_resolution_m": 30.0,
+    "dem_url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N11_00_E076_00_DEM/Copernicus_DSM_COG_10_N11_00_E076_00_DEM.tif",
+    "raw_dem_path": "D:/Defence/MyProject1/02_Raw_Data/DEM/Copernicus_DSM_COG_10_N11_00_E076_00_DEM.tif",
+    "processed_dem_path": "D:/Defence/MyProject1/03_Processed_Data/DEM/elevation_32643.tif"
+  },
+  "terrain_derivatives": {
+    "slope_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/slope_deg.tif",
+    "slope_percent_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/slope_pct.tif",
+    "aspect_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/aspect.tif",
+    "hillshade_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/hillshade.tif",
+    "curvature_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/curvature.tif",
+    "ruggedness_path": "D:/Defence/MyProject1/03_Processed_Data/Terrain/tri_ruggedness.tif"
+  },
+  "osm": {
+    "roads_raw_geojson": "D:/Defence/MyProject1/02_Raw_Data/OSM/coonoor_highways_raw.geojson",
+    "roads_shp": "D:/Defence/MyProject1/03_Processed_Data/OSM/coonoor_roads_utm.shp",
+    "road_buffer_distance_m": 100.0,
+    "road_proximity_raster": "D:/Defence/MyProject1/03_Processed_Data/Features/road_proximity.tif"
+  },
+  "trafficability": {
+    "index_raster_continuous": "D:/Defence/MyProject1/03_Processed_Data/Terrain/trafficability_index.tif",
+    "index_raster_classified": "D:/Defence/MyProject1/03_Processed_Data/Terrain/trafficability_classes.tif",
+    "classes": {
+      "1": "High Trafficability (Slope <= 10 deg, Low Ruggedness)",
+      "2": "Moderate Trafficability (10 < Slope <= 20 deg, Moderate Ruggedness)",
+      "3": "Restricted Trafficability (20 < Slope <= 30 deg, High Ruggedness)",
+      "4": "Severe / Impassable (Slope > 30 deg, Extreme Ruggedness / Cliffs)"
+    },
+    "slope_weight": 0.60,
+    "ruggedness_weight": 0.40
+  },
+  "visibility": {
+    "observer_point_shp": "D:/Defence/MyProject1/03_Processed_Data/Visibility/observer_points.shp",
+    "viewshed_raster": "D:/Defence/MyProject1/03_Processed_Data/Visibility/viewshed_demonstration.tif",
+    "observer_offset_m": 2.0,
+    "target_offset_m": 0.0,
+    "max_distance_m": 5000.0
+  },
+  "postgis": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "postgres",
+    "user": "postgres",
+    "schema": "coonoor_geoai"
+  }
+}

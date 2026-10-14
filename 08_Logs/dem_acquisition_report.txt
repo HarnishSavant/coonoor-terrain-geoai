@@ -1,0 +1,26 @@
+============================================================
+DEM ACQUISITION & PREPARATION - COONOOR TALUK
+============================================================
+Raw DEM already present: D:\Defence\MyProject1\02_Raw_Data\DEM\Copernicus_DSM_COG_10_N11_00_E076_00_DEM.tif (42.13 MB)
+
+Validating Raw DEM Raster:
+  Format: TIFF
+  CRS: GCS_WGS_1984 (EPSG:4326)
+  Cell Size: 0.000278 x 0.000278 deg (~30 m)
+  Raw Bounds: XMin=76.00, YMin=11.00, XMax=77.00, YMax=12.00
+
+Reprojecting and Clipping DEM to Study Area (EPSG:32643)...
+  Projecting raster to UTM Zone 43N (Bilinear interpolation, cell size = 30.0m)...
+  ProjectRaster completed.
+  Extracting by Mask using AOI: D:/Defence/MyProject1/01_AOI/coonoor_aoi_utm.shp...
+  Clipped DEM successfully saved to: D:\Defence\MyProject1\03_Processed_Data\DEM\elevation_32643.tif
+
+Validating Processed DEM:
+  Spatial Reference: WGS_1984_UTM_Zone_43N (EPSG:32643)
+  Cell Size: 30.00 m x 30.00 m
+  Raster Columns: 692, Rows: 546
+  Elevation Min: 413.07 m
+  Elevation Max: 2388.21 m
+  Elevation Mean: 1635.93 m
+  Elevation StdDev: 368.70 m
+  STATUS: Elevation range is completely consistent with Nilgiris/Coonoor terrain (PASS).

@@ -1,0 +1,22 @@
+============================================================
+ESA WORLDCOVER 2021 ACQUISITION & PROCESSING - COONOOR TALUK
+============================================================
+Downloading ESA WorldCover 2021 tile from:
+  https://esa-worldcover.s3.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N09E075_Map.tif
+
+Download completed in 31.7s. Saved to: D:\Defence\MyProject1\02_Raw_Data\WorldCover\ESA_WorldCover_10m_2021_v200_N09E075_Map.tif
+
+Reprojecting & Clipping Land Cover to EPSG:32643 (Cell Size: 30m, NEAREST)...
+  ProjectRaster completed.
+  Clipped Land Cover saved to: D:\Defence\MyProject1\03_Processed_Data\LandCover\worldcover_coonoor_32643.tif
+
+============================================================
+ESA WORLDCOVER LAND COVER DISTRIBUTION - COONOOR TALUK
+============================================================
+Total Valid Raster Pixels: 247,149 (222.43 km²)
+  Class 10 (Tree cover                  ): 149.72 km² (14972.0 ha) | 67.31%
+  Class 30 (Grassland                   ):  58.87 km² ( 5887.3 ha) | 26.47%
+  Class 40 (Cropland (Tea/Coffee Estates)):   5.77 km² (  577.1 ha) |  2.59%
+  Class 50 (Built-up (Settlements/Urban)):   7.95 km² (  794.7 ha) |  3.57%
+  Class 60 (Bare / sparse vegetation    ):   0.07 km² (    6.8 ha) |  0.03%
+  Class 80 (Permanent water bodies      ):   0.06 km² (    5.6 ha) |  0.03%
